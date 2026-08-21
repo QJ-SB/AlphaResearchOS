@@ -1,0 +1,7 @@
+# ===============================================
+# AlphaResearchOS - repository line-ending policy
+# ===============================================
+
+
+# Keep repository text deterministic across Windows/Linux/macOS.
+* text=auto eol=lf

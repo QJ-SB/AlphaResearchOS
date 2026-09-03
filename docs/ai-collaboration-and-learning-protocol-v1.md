@@ -82,19 +82,26 @@ Use the minimum rescue needed:
 
 The objective is restored understanding and return to English, not permanent translation dependence.
 
-## 6. Mainline Authority
+## 6. Human Control and Mainline Authority
 
-Mainline alone owns:
+The human owns problem selection, objective definition or approval, consequential judgment, Sidecar dispatch and termination, and final responsibility. Mainline is the sole operational session record and integration authority; that authority does not transfer ownership of the human's objective or permit unilateral Sidecar launch.
 
-- session objective, scope, modes, and acceptance criteria;
-- interpretation of the relevant canonical state;
-- project decisions made with the human;
-- issuing versioned Context Capsules;
-- accepting, rejecting, or partially merging Sidecar Returns;
-- proposing canonical updates;
-- checkpoint creation and archival trigger.
+Mainline may recommend a Sidecar and explain the reason, but it cannot silently launch one. After a human request or approval, Mainline owns formal Capsule compilation, versioning, and issuance. Mainline also owns Return adjudication, checkpoint drafting, and promotion proposals. It accepts, rejects, partially merges, or reissues Sidecar Returns only under the declared objective, scope, modes, acceptance criteria, canonical authority, and human decisions.
 
-Mainline must apply the question-dependent authority matrix in [Project Instruction](project-instruction.md). Newness alone is not authority. Conflicts must be surfaced.
+The lifecycle contract is:
+
+```text
+Human need or Mainline recommendation
+  -> Human request/approval
+  -> Mainline Capsule compilation
+  -> Human review and manual dispatch
+  -> Bounded Sidecar iteration
+  -> Human closure request or acceptance completion
+  -> Typed Return
+  -> Mainline freshness and merge decision
+```
+
+Manual dispatch of the reviewed Capsule into a Sidecar window is human launch authorization. Mainline must apply the question-dependent authority matrix in [Project Instruction](project-instruction.md). Newness alone is not authority. Conflicts must be surfaced.
 
 ## 7. Sidecars and Boundaries
 
@@ -102,15 +109,21 @@ Supported roles are English Teacher, Concept Tutor, Code Tutor, Reviewer, Examin
 
 Normal Sidecars are read-only. An External Coding Agent may write only to a supplied copy, task branch, or explicitly authorized path set. No Sidecar may change session scope, promote its own output to canonical truth, merge to the authoritative branch, claim fresh state without matching provenance, or bypass human or deterministic gates.
 
+The work object must be embedded in the Capsule, identified by an exact accessible path or range and version, or declared as the exact attachment that will immediately follow the Capsule. When the object is supplied separately, the Sidecar must wait for it and verify its identity and version before starting. A mismatch is a blocker, not permission to infer or substitute another object.
+
+A material change to role, work object, mission, scope, required evidence, or acceptance criteria requires a fresh Capsule. Ordinary questions, tutoring, review exchanges, or implementation iterations that stay within the original mission and bound work object remain under the same Capsule.
+
 The operating principle is: **cheap execution, strong specification, independent verification**. Critical point-in-time correctness, leakage, statistics, risk, portfolio, execution, and capital logic require strong independent verification regardless of executor cost.
 
 ## 8. Context Capsules and Typed Returns
 
-A Context Capsule is the minimum sufficient, versioned context for one bounded task. It includes identity, time, Mainline checkpoint/session, relevant state revisions or base commit, role/mode, objective, facts, invariants, allowed artifacts, exclusions, return type, and acceptance criteria.
+A Context Capsule is the minimum sufficient, versioned context for one bounded task. It includes identity, time, Mainline checkpoint/session, relevant state revisions or base commit, human request/approval and dispatch mechanism, role/mode, objective, exact work-object identity/version and delivery method, facts, invariants, allowed artifacts, exclusions, return type, and acceptance criteria. Mainline compiles it only after a human request or approval; it is not generated every turn.
 
-A typed Sidecar Return includes identity, source capsule, provenance used, freshness declaration, result, assumptions, preserved boundaries, evidence, uncertainty, proposed action, verification, deviations, and canonical-state impact. Role-specific fields extend but never replace this shared provenance.
+A typed Sidecar Return includes identity, source capsule, provenance used, freshness declaration, result, assumptions, preserved boundaries, evidence, uncertainty, proposed action, verification, deviations, and canonical-state impact. The result may be substantive, `None`, blocked, negative, or no-change. Role-specific fields extend but never replace this shared provenance.
 
 Staleness is semantic and version-based, not simply chronological. A return is stale if a relevant state revision, ADR, architecture boundary, scope, acceptance criterion, artifact, phase, or relied-upon assumption changes. Mainline must revalidate it or issue a fresh capsule before merge.
+
+Every formal Sidecar result intended for Mainline must use the typed Return. Cancelled or abandoned work without a Return contributes nothing to Mainline and must not be merged; its issued Capsule is accounted for at closure as cancelled, abandoned/incomplete, or reissued.
 
 ## 9. Learning Evidence
 
@@ -119,6 +132,8 @@ Project output and human learning are separate objectives. Valid mastery evidenc
 Use high AI delegation for boilerplate and bounded implementation that the human can validate. Retain high human internalization for core statistics, inference, leakage, factor/risk semantics, benchmarks, attribution, portfolio/risk/capacity logic, and critical execution state.
 
 ## 10. Session Closure and Promotion
+
+Closure is invoked by a human request or proposed by Mainline at a meaningful stopping point. It is not a background watcher and is not triggered by closing a browser or chat window. A Sidecar may recommend closure when its acceptance criteria are met, but the human decides whether its mission is finished and may request the final Return.
 
 At the end of meaningful work:
 
@@ -133,4 +148,4 @@ Raw session work
 
 The human review surface prioritizes decisions, evidence and falsification, uncertainty, risks, boundary violations, changed invariants/interfaces, important diffs, learning claims needing demonstration, and the next irreversible or costly action.
 
-Use [Session Archive Self-Check](session/session-archive-self-check.md). Not every session updates every state. A checkpoint records provenance but is not canonical truth by itself. Preserve material negative results and failed approaches.
+Use [Session Archive Self-Check](session/session-archive-self-check.md) as an explicit protocol operation. Not every session updates every state. A closure report, checkpoint draft, saved checkpoint, or promotion proposal does not itself authorize a canonical write. Canonical updates require supported evidence, recorded human disposition, and explicit write authorization. A checkpoint records provenance but is not canonical truth by itself. Preserve material negative results and failed approaches.

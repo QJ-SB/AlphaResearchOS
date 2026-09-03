@@ -7,7 +7,7 @@
 **They show:**
 - **intuitive visual diagrams of industry-wide general-purpose knowledge**
 ```text
-    ✅[Current Map]:
+    ✅[e.g.]:
 
         learning/
         

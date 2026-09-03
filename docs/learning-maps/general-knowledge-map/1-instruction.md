@@ -9,7 +9,7 @@
 ```text
     ✅[e.g.]:
 
-        learning/
+        learning/...
         
         ├── a-share-indices-map.md
 
